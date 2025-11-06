@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vikas Hanamant Rathod — AI & Web Engineer</title>
+  <meta name="description"
+    content="Portfolio of Vikas Hanamant Rathod — Web Development, Data Analysis, Machine Learning, UI/UX and AI projects." />
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Background Effects -->
+  <canvas id="particles"></canvas>
+  <div id="cursor-trail"></div>
+
+  <!-- Nav -->
+  <nav class="nav" id="navbar" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Go to home">VR</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu"
+        aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <div class="nav-menu" id="nav-menu" role="menu">
+        <a href="#home" class="nav-link" role="menuitem">Home</a>
+        <a href="#about" class="nav-link" role="menuitem">About</a>
+        <a href="#projects" class="nav-link" role="menuitem">Projects</a>
+        <a href="#skills" class="nav-link" role="menuitem">Skills</a>
+        <a href="#certifications" class="nav-link" role="menuitem">Certifications</a>
+        <a href="#education" class="nav-link" role="menuitem">Education</a>
+        <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+        <button id="theme-toggle" class="btn btn-ghost" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero section" id="home">
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 class="title">Vikas <span class="accent">Hanamant</span> Rathod</h1>
+        <h2 class="subtitle"><span id="typing">Aspiring Engineer</span></h2>
+        <p class="lead">
+          Web Development • Data Analysis • Machine Learning • UI/UX • AI.
+          I design and build scalable apps and data-driven solutions that improve real-world outcomes.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket-launch"></i> View My Work</a>
+          <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
+          <a href="assets/resume.pdf" download class="btn btn-outline"><i class="fa-solid fa-download"></i> Download Resume</a>
+        </div>
+        <div class="socials">
+          <a href="mailto:vrathod07913@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/vikas-rathod-047496261" target="_blank" rel="noopener"
+            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Vicky010101" target="_blank" rel="noopener" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/call_me_vicky_0101?igsh=MWczbXBkYnB3ZnluZg==" target="_blank" rel="noopener"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="avatar-wrap neon">
+          <img src="images/svg.jpg" alt="Portrait of Vikas Hanamant Rathod" class="avatar" />
+          <div class="orbit o1"><i class="fab fa-python"></i></div>
+          <div class="orbit o2"><i class="fab fa-react"></i></div>
+          <div class="orbit o3"><i class="fa-solid fa-brain"></i></div>
+          <div class="orbit o4"><i class="fa-solid fa-database"></i></div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About"><i class="fa-solid fa-angles-down"></i></a>
+  </header>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Building with code, guided by data, powered by AI.</p>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-copy glass">
+          <h3>Computer Science & Engineering (B.E.)</h3>
+          <p>
+            Motivated and detail-oriented engineering student with strong skills in web development, data analysis,
+            machine learning, UI/UX design, and AI research. I build scalable applications and data-driven solutions
+            to enhance business and user outcomes. Active hackathon participant and team collaborator.
+          </p>
+          <ul class="about-points">
+            <li><i class="fa-solid fa-bolt"></i> Real-time systems with Firebase & WebSockets</li>
+            <li><i class="fa-solid fa-layer-group"></i> Full‑stack: React / Node / Django</li>
+            <li><i class="fa-solid fa-chart-line"></i> ML models & visual analytics (Power BI, Excel)</li>
+          </ul>
+          <div class="stats">
+            <div class="stat"><span class="num" data-target="2">0</span><span class="label">Years Experience</span>
+            </div>
+            <div class="stat"><span class="num" data-target="15">0</span><span class="label">Projects</span></div>
+            <div class="stat"><span class="num" data-target="92">0</span><span class="label">ML Acc. %</span></div>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="highlight glass">
+            <div class="icon"><i class="fa-solid fa-trophy"></i></div>
+            <div>
+              <h4>Hackathons</h4>
+              <p>Active participant and team lead across multiple 24‑hr hackathons.</p>
+            </div>
+          </div>
+          <div class="highlight glass">
+            <div class="icon"><i class="fa-solid fa-certificate"></i></div>
+            <div>
+              <h4>Certified & Skilled</h4>
+              <p>One Roadmap, HP LIFE, Deloitte, Mastercard Forage, Google, TATA, etc.</p>
+            </div>
+          </div>
+          <div class="highlight glass">
+            <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+            <div>
+              <h4>Collaboration</h4>
+              <p>Comfortable leading teams, mentoring peers, and shipping features fast.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Selected work across AI/ML and full‑stack development.</p>
+      </header>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI/ML</button>
+        <button class="filter-btn" data-filter="fullstack">Full‑Stack</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+      </div>
+
+      <div class="grid projects-grid">
+        <!-- CureQueue -->
+        <article class="card project" data-cat="fullstack ai">
+          <div class="thumb"><i class="fa-solid fa-hospital-user"></i></div>
+          <div class="body">
+            <div class="meta"><span class="chip">Full‑Stack</span><span class="chip">AI</span></div>
+            <h3 class="card-title">CureQueue — Real‑time Queues & Appointments</h3>
+            <p>Full‑stack platform for patient queue visibility, doctor availability and online bookings with ML‑based
+              predictive wait times. Real‑time updates via Firebase & WebSockets.</p>
+            <div class="tech">
+              <span>React/Vue</span><span>Node/Django</span><span>Firebase</span><span>WebSockets</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- GlamRents -->
+        <article class="card project" data-cat="fullstack">
+          <div class="thumb"><i class="fa-solid fa-shirt"></i></div>
+          <div class="body">
+            <div class="meta"><span class="chip">E‑commerce</span></div>
+            <h3 class="card-title">GlamRents — Apparel Rental Marketplace</h3>
+            <p>End‑to‑end rental marketplace with secure order management, deposits, delivery & cleaning services, and
+              subscription options. Mobile‑first, sustainability‑focused UX.</p>
+            <div class="tech">
+              <span>React</span><span>Node</span><span>UI/UX</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Data/Analytics Showcase -->
+        <article class="card project" data-cat="data ai">
+          <div class="thumb"><i class="fa-solid fa-chart-column"></i></div>
+          <div class="body">
+            <div class="meta"><span class="chip">Analytics</span></div>
+            <h3 class="card-title">Data Analytics & Visualization</h3>
+            <p>Dashboards and insights with Power BI and Python—turning raw data into decisions. Includes forecasting,
+              segmentation and KPI monitoring.</p>
+            <div class="tech">
+              <span>Power BI</span><span>Python</span><span>Excel</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- AI Research -->
+        <article class="card project" data-cat="ai">
+          <div class="thumb"><i class="fa-solid fa-robot"></i></div>
+          <div class="body">
+            <div class="meta"><span class="chip">Research</span></div>
+            <h3 class="card-title">AI Research & Prototyping</h3>
+            <p>Experimentation with classical ML and modern AI for search, recommendations and wait‑time prediction.
+              Emphasis on robustness and interpretability.</p>
+            <div class="tech">
+              <span>ML</span><span>NLP</span><span>MLOps</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">A quick snapshot of tools I use to ship.</p>
+      </header>
+
+      <div class="skills-grid">
+        <div class="skill-card glass">
+          <div class="skill-top"><i class="fa-solid fa-code"></i>
+            <h3>Programming</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>C++</li>
+          </ul>
+          <div class="bars">
+            <div class="bar"><span>Python</span>
+              <div class="bar-fill" data-level="92"></div>
+            </div>
+            <div class="bar"><span>JavaScript</span>
+              <div class="bar-fill" data-level="88"></div>
+            </div>
+            <div class="bar"><span>SQL</span>
+              <div class="bar-fill" data-level="85"></div>
+            </div>
+            <div class="bar"><span>C++</span>
+              <div class="bar-fill" data-level="80"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-top"><i class="fa-solid fa-globe"></i>
+            <h3>Web</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Django</li>
+          </ul>
+          <div class="bars">
+            <div class="bar"><span>React.js</span>
+              <div class="bar-fill" data-level="88"></div>
+            </div>
+            <div class="bar"><span>Node.js</span>
+              <div class="bar-fill" data-level="84"></div>
+            </div>
+            <div class="bar"><span>Django</span>
+              <div class="bar-fill" data-level="82"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-top"><i class="fa-solid fa-brain"></i>
+            <h3>AI / Data</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Machine Learning</li>
+            <li>Data Viz</li>
+            <li>Power BI</li>
+            <li>Excel</li>
+          </ul>
+          <div class="bars">
+            <div class="bar"><span>Machine Learning</span>
+              <div class="bar-fill" data-level="90"></div>
+            </div>
+            <div class="bar"><span>Data Visualization</span>
+              <div class="bar-fill" data-level="86"></div>
+            </div>
+            <div class="bar"><span>Power BI</span>
+              <div class="bar-fill" data-level="82"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-top"><i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Tools & DevOps</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Git</li>
+            <li>Jenkins</li>
+            <li>VS Code</li>
+            <li>Firebase</li>
+            <li>WebSockets</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certs section" id="certifications">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Certifications & Achievements</h2>
+        <p class="section-subtitle">A selection of recent learning and recognition.</p>
+      </header>
+
+      <div class="grid cert-grid">
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">One Roadmap</span>
+            <span class="date">Jul 2025</span>
+          </div>
+          <h3>Data Analyst Certification</h3>
+        </div>
+
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">HP LIFE | HP Foundation</span>
+            <span class="date">Jul 2025</span>
+          </div>
+          <h3>Data Science & Analytics</h3>
+        </div>
+
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">Deloitte (Forage)</span>
+            <span class="date">Jun 2025</span>
+          </div>
+          <h3>Data Analytics Job Simulation</h3>
+        </div>
+
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">Mastercard/NY Jobs CEO Council (Forage)</span>
+            <span class="date">Feb 2025</span>
+          </div>
+          <h3>Cybersecurity Virtual Experience</h3>
+        </div>
+
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">Google (Coursera)</span>
+            <span class="date">Jan–Feb 2024</span>
+          </div>
+          <h3>Foundations of Cybersecurity</h3>
+        </div>
+
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">TATA (Forage)</span>
+            <span class="date">Feb 2025</span>
+          </div>
+          <h3>Data Visualization: Empowering Business Insights</h3>
+        </div>
+
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">Simplilearn SkillUp</span>
+            <span class="date">Jan–Feb 2025</span>
+          </div>
+          <h3>Machine Learning</h3>
+        </div>
+
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">OfficeMaster</span>
+            <span class="date">Feb 2025</span>
+          </div>
+          <h3>Power BI Workshop</h3>
+        </div>
+
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">upGrad @ MMEC</span>
+            <span class="date">Aug 2023</span>
+          </div>
+          <h3>Web Development Workshop</h3>
+        </div>
+
+        <div class="card glass">
+          <div class="card-head">
+            <span class="issuer">Hackathons</span>
+            <span class="date">2024–2025</span>
+          </div>
+          <h3>Hack to Future ’24 • Clash of Codes ’24 • Hack to Intern</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="education section" id="education">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">Academic background and foundations.</p>
+      </header>
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-content glass">
+            <h3>B.E. — Computer Science & Engineering</h3>
+            <p>Maratha Mandal’s Engineering College, Belagavi</p>
+            <span class="t-date">Nov 2022 – Present</span>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-content glass">
+            <h3>PUC — Science (PCM)</h3>
+            <p>Maratha Mandal PU Integrated College, Belagavi</p>
+            <span class="t-date">Jun 2020 – Mar 2022</span>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-content glass">
+            <h3>10th — CBSE Equivalent</h3>
+            <p>Model English Medium School, Belagavi</p>
+            <span class="t-date">Jun 2010 – Mar 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">Let’s Connect</h2>
+        <p class="section-subtitle">Have an opportunity or idea? I'd love to hear it.</p>
+      </header>
+
+      <div class="contact-grid">
+        <div class="contact-info glass">
+          <div class="info-item"><i class="fa-regular fa-envelope"></i><span><a
+                href="mailto:vrathod07913@gmail.com">vrathod07913@gmail.com</a></span></div>
+          <div class="info-item"><i class="fa-solid fa-phone"></i><span>+91 9741794663</span></div>
+          <div class="info-item"><i class="fa-solid fa-location-dot"></i><span>Belagavi, India</span></div>
+          <div class="socials big">
+            <a href="https://linkedin.com/in/vikas-rathod-047496261" target="_blank" rel="noopener"
+              aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Vicky010101" target="_blank" rel="noopener" aria-label="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/call_me_vicky_0101?igsh=MWczbXBkYnB3ZnluZg==" target="_blank" rel="noopener"
+              aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form glass" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Project / Role / Query" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="field full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message…" required></textarea>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit"><i class="fa-regular fa-paper-plane"></i> Send Message</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Vikas Hanamant Rathod. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
