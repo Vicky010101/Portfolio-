@@ -163,29 +163,100 @@ window.addEventListener('mousemove', e => {
   trail.style.left = e.clientX + 'px';
 });
 
-// Contact Form with EmailJS
-const form = document.getElementById('contact-form');
-const statusEl = document.getElementById('form-status');
+// ===== Contact Form Validation + EmailJS send =====
+const form = document.getElementById("contact-form");
+const statusEl = document.getElementById("form-status");
+const submitBtn = form?.querySelector('button[type="submit"]');
 
 // Initialize EmailJS
 emailjs.init('Kng2efR38vEPW0r7b');
 
-form?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  statusEl.textContent = 'Sending...';
-
-  emailjs.send('service_tj4zjqg', 'template_1xvsetv', {
-    name: form.name.value,
-    email: form.email.value,
-    subject: form.subject.value,
-    message: form.message.value,
-  })
-  .then(() => {
-    statusEl.textContent = '✔ Message sent successfully!';
-    form.reset();
-  })
-  .catch((err) => {
-    console.error(err);
-    statusEl.textContent = '✖ Failed to send message. Try again.';
+function clearErrors() {
+  form.querySelectorAll(".field").forEach(f => {
+    f.classList.remove("error");
+    const err = f.querySelector(".err");
+    if (err) err.remove();
+    const input = f.querySelector("input, textarea");
+    if (input) input.setAttribute("aria-invalid", "false");
   });
+}
+
+function setError(fieldName, message) {
+  const wrap = form.querySelector(`#${fieldName}`)?.closest(".field");
+  if (!wrap) return;
+  wrap.classList.add("error");
+  const el = document.createElement("small");
+  el.className = "err";
+  el.textContent = message;
+  wrap.appendChild(el);
+  const input = wrap.querySelector("input, textarea");
+  if (input) input.setAttribute("aria-invalid", "true");
+}
+
+function validateEmail(v) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+}
+
+function validateForm() {
+  clearErrors();
+  let ok = true;
+
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const subject = form.subject.value.trim();
+  const message = form.message.value.trim();
+
+  if (name.length < 2) { setError("name", "Please enter your full name."); ok = false; }
+  if (!validateEmail(email)) { setError("email", "Enter a valid email address."); ok = false; }
+  if (subject.length < 3) { setError("subject", "Please add a subject (min 3 chars)."); ok = false; }
+  if (message.length === 0) { setError("message", "Please enter a message."); ok = false; }
+
+  return ok;
+}
+
+// live cleanup while typing
+["name","email","subject","message"].forEach(id => {
+  const el = document.getElementById(id);
+  el?.addEventListener("input", () => {
+    const field = el.closest(".field");
+    if (!field) return;
+    field.classList.remove("error");
+    field.querySelector(".err")?.remove();
+    el.setAttribute("aria-invalid","false");
+  });
+});
+
+form?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  statusEl.textContent = "";
+
+  // block sending if invalid
+  if (!validateForm()) {
+    statusEl.textContent = "Please fix the highlighted fields.";
+    const firstErr = form.querySelector(".field.error input, .field.error textarea");
+    firstErr?.focus();
+    return;
+  }
+
+  // disable button during send
+  submitBtn?.setAttribute("disabled", "true");
+  submitBtn?.classList.add("is-sending");
+  statusEl.textContent = "Sending...";
+
+  try {
+    await emailjs.send("service_tj4zjqg", "template_1xvsetv", {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      subject: form.subject.value.trim(),
+      message: form.message.value.trim(),
+    });
+    statusEl.textContent = "✔ Message sent successfully!";
+    form.reset();
+  } catch (err) {
+    console.error(err);
+    statusEl.textContent = "✖ Failed to send message. Try again.";
+  } finally {
+    submitBtn?.removeAttribute("disabled");
+    submitBtn?.classList.remove("is-sending");
+  }
 });
