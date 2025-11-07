@@ -5,7 +5,6 @@
 const root = document.documentElement;
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
-const themeToggle = document.getElementById('theme-toggle');
 const typing = document.getElementById('typing');
 const yearEl = document.getElementById('year');
 
@@ -27,17 +26,7 @@ document.querySelectorAll('.nav-link').forEach(a => {
   });
 });
 
-// Theme toggle + persist (default: dark mode)
-const savedTheme = localStorage.getItem('theme') || 'dark';
-if (savedTheme === 'light') {
-  root.classList.add('light');
-} else {
-  root.classList.remove('light'); // Ensure dark mode is active
-}
-themeToggle?.addEventListener('click', () => {
-  root.classList.toggle('light');
-  localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
-});
+// Dark mode only (theme toggle removed)
 
 // Typing roles
 const roles = ['Aspiring Engineer', 'Web Developer', 'Data Analyst', 'Machine Learning', 'UI/UX & AI'];
@@ -174,30 +163,29 @@ window.addEventListener('mousemove', e => {
   trail.style.left = e.clientX + 'px';
 });
 
-// Contact Form with Nodemailer Backend
+// Contact Form with EmailJS
 const form = document.getElementById('contact-form');
 const statusEl = document.getElementById('form-status');
 
-form?.addEventListener('submit', async (e) => {
+// Initialize EmailJS
+emailjs.init('Kng2efR38vEPW0r7b');
+
+form?.addEventListener('submit', (e) => {
   e.preventDefault();
   statusEl.textContent = 'Sending...';
-  const data = {
-    name: form.name.value.trim(),
-    email: form.email.value.trim(),
-    subject: form.subject.value.trim(),
-    message: form.message.value.trim(),
-  };
-  try{
-    const res = await fetch('http://localhost:5000/send', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-    const result = await res.json();
-    statusEl.textContent = result.success ? '✔ Sent successfully!' : '✖ Error sending message.';
-    if (result.success) form.reset();
-  }catch(err){
+
+  emailjs.send('service_tj4zjqg', 'template_1xvsetv', {
+    name: form.name.value,
+    email: form.email.value,
+    subject: form.subject.value,
+    message: form.message.value,
+  })
+  .then(() => {
+    statusEl.textContent = '✔ Message sent successfully!';
+    form.reset();
+  })
+  .catch((err) => {
     console.error(err);
-    statusEl.textContent = '✖ Error sending message. Please email me directly.';
-  }
+    statusEl.textContent = '✖ Failed to send message. Try again.';
+  });
 });
