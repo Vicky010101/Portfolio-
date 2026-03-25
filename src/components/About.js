@@ -58,11 +58,11 @@ const About = () => {
                         </ul>
                         <div className="stats">
                             <div className="stat">
-                                <span className="num" data-target="2" ref={(el) => (statsRef.current[0] = el)}>0</span>
+                                <span className="num text-stat">Fresher</span>
                                 <span className="label">Years Experience</span>
                             </div>
                             <div className="stat">
-                                <span className="num" data-target="15" ref={(el) => (statsRef.current[1] = el)}>0</span>
+                                <span className="num text-stat">10+</span>
                                 <span className="label">Projects</span>
                             </div>
                             <div className="stat">
