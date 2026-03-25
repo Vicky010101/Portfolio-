@@ -47,6 +47,7 @@ const Navbar = () => {
                 <div className="nav-menu" id="nav-menu" role="menu" style={{ display: isOpen && window.innerWidth < 680 ? 'flex' : '' }}>
                     <a href="#home" className="nav-link" role="menuitem" onClick={(e) => handleNavClick(e, '#home')}>Home</a>
                     <a href="#about" className="nav-link" role="menuitem" onClick={(e) => handleNavClick(e, '#about')}>About</a>
+                    <a href="#internship" className="nav-link" role="menuitem" onClick={(e) => handleNavClick(e, '#internship')}>Internship</a>
                     <a href="#projects" className="nav-link" role="menuitem" onClick={(e) => handleNavClick(e, '#projects')}>Projects</a>
                     <a href="#skills" className="nav-link" role="menuitem" onClick={(e) => handleNavClick(e, '#skills')}>Skills</a>
                     <a href="#certifications" className="nav-link" role="menuitem" onClick={(e) => handleNavClick(e, '#certifications')}>Certifications</a>
