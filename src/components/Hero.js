@@ -55,7 +55,7 @@ const Hero = () => {
                 </div>
                 <div className="hero-right">
                     <div className="avatar-wrap neon">
-                        <img src="/images/svg.jpg" alt="Portrait of Vikas Hanamant Rathod" className="avatar" />
+                        <img src="/images/svg.png" alt="Portrait of Vikas Hanamant Rathod" className="avatar" />
                         <div className="orbit o1"><i className="fab fa-python"></i></div>
                         <div className="orbit o2"><i className="fab fa-react"></i></div>
                         <div className="orbit o3"><i className="fa-solid fa-brain"></i></div>
