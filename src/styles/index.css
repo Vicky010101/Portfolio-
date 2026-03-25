@@ -657,11 +657,98 @@ body {
 }
 
 .t-score {
-    display: inline-block;
+    display: block;
     margin-top: 6px;
     font-size: 13px;
     font-weight: 600;
     color: var(--accent);
+}
+
+/* ── Theme Toggle Button ── */
+.theme-toggle {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.25s;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle:hover {
+    background: var(--border);
+    transform: translateY(-1px);
+}
+
+/* ── Light Mode Overrides ── */
+body,
+body * {
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-mode {
+    --bg: #f0f4f8;
+    --bg-2: #ffffff;
+    --text: #111827;
+    --muted: #4b5563;
+    --glass: rgba(0, 0, 0, 0.04);
+    --border: rgba(88, 166, 255, 0.3);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 40px rgba(88, 166, 255, 0.05);
+    background: #f0f4f8;
+    color: #111827;
+}
+
+body.light-mode .nav {
+    background: rgba(240, 244, 248, 0.85);
+}
+
+body.light-mode .nav-logo {
+    background: linear-gradient(135deg, rgba(88, 166, 255, 0.12), rgba(34, 211, 238, 0.12));
+}
+
+body.light-mode .nav-link {
+    color: #4b5563;
+}
+
+body.light-mode .nav-link:hover {
+    color: #111827;
+    background: rgba(88, 166, 255, 0.1);
+}
+
+body.light-mode .glass {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .field input,
+body.light-mode .field textarea {
+    background: #ffffff;
+    color: #111827;
+    border-color: rgba(88, 166, 255, 0.3);
+}
+
+body.light-mode .filter-btn {
+    background: rgba(88, 166, 255, 0.08);
+    color: #111827;
+}
+
+body.light-mode .project {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+body.light-mode .bar-fill {
+    background: rgba(88, 166, 255, 0.15);
+}
+
+body.light-mode #particles {
+    opacity: 0.3;
+}
+
+body.light-mode .footer {
+    background: #e8edf2;
 }
 
 /* CONTACT */
