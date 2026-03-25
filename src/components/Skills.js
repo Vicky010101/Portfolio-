@@ -37,22 +37,20 @@ const Skills = () => {
         {
             icon: 'fa-code',
             title: 'Programming',
-            tags: ['Python', 'JavaScript', 'SQL', 'C++'],
+            tags: ['Java', 'Python', 'JavaScript'],
             bars: [
-                { name: 'Python', level: 92 },
-                { name: 'JavaScript', level: 88 },
-                { name: 'SQL', level: 85 },
-                { name: 'C++', level: 80 }
+                { name: 'Java', level: 95 },
+                { name: 'Python', level: 50 },
+                { name: 'JavaScript', level: 75 }
             ]
         },
         {
             icon: 'fa-globe',
             title: 'Web',
-            tags: ['HTML5', 'CSS3', 'React.js', 'Node.js', 'Django'],
+            tags: ['HTML5', 'CSS3', 'React.js', 'Node.js'],
             bars: [
                 { name: 'React.js', level: 88 },
-                { name: 'Node.js', level: 84 },
-                { name: 'Django', level: 82 }
+                { name: 'Node.js', level: 84 }
             ]
         },
         {
@@ -68,7 +66,13 @@ const Skills = () => {
         {
             icon: 'fa-screwdriver-wrench',
             title: 'Tools & DevOps',
-            tags: ['Git', 'Jenkins', 'VS Code', 'Firebase', 'WebSockets'],
+            tags: ['Git', 'GitHub', 'Eclipse', 'VS Code', 'Firebase', 'Jenkins', 'MySQL', 'MongoDB Atlas'],
+            bars: []
+        },
+        {
+            icon: 'fa-robot',
+            title: 'Agentic AI',
+            tags: ['Warp', 'Cursor', 'Kiro', 'Lovable', 'Bolt', 'v0'],
             bars: []
         }
     ];

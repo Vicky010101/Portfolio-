@@ -535,6 +535,11 @@ body {
     padding: 18px
 }
 
+/* 5th card (Agentic AI) spans full width */
+.skill-card:last-child:nth-child(odd) {
+    grid-column: span 12;
+}
+
 .skill-top {
     display: flex;
     align-items: center;

@@ -11,7 +11,7 @@ const Projects = () => {
             chips: ['Full‑Stack', 'AI'],
             title: 'CureQueue — Real‑time Queues & Appointments',
             description: 'Full‑stack platform for patient queue visibility, doctor availability and online bookings with ML‑based predictive wait times. Real‑time updates via Firebase & WebSockets.',
-            tech: ['React/Vue', 'Node/Django', 'Firebase', 'WebSockets'],
+            tech: ['Reactjs', 'Nodejs', 'MongoDB', 'nodemailer'],
             link: 'https://cure-queue-cyan.vercel.app/'
         },
         {
