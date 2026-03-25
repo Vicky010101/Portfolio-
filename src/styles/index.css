@@ -224,6 +224,26 @@ body {
     max-width: 600px
 }
 
+/* Hero CTA buttons — evenly spaced, single row on desktop */
+.hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+    .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-ctas .btn {
+        justify-content: center;
+    }
+}
+
 .socials {
     display: flex;
     gap: 12px;

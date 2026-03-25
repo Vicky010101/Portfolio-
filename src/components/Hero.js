@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
-    const roles = ['Aspiring Engineer', 'Web Developer', 'Data Analyst', 'Machine Learning', 'UI/UX & AI'];
+    const roles = ['Aspiring Engineer', 'Java Fullstack Developer'];
     const [currentRole, setCurrentRole] = useState(0);
 
     useEffect(() => {
@@ -24,7 +24,6 @@ const Hero = () => {
                     <h1 className="title">Vikas <span className="accent">Hanamant</span> Rathod</h1>
                     <h2 className="subtitle"><span id="typing">{roles[currentRole]}</span></h2>
                     <p className="lead">
-                        Web Development • Data Analysis • Machine Learning • UI/UX • AI.
                         I design and build scalable apps and data-driven solutions that improve real-world outcomes.
                     </p>
                     <div className="hero-ctas">
