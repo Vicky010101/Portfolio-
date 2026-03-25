@@ -656,6 +656,14 @@ body {
     padding: 14px
 }
 
+.t-score {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
 /* CONTACT */
 .contact-grid {
     display: grid;
